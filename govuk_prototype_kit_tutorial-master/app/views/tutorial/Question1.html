@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/docs/tutorials-and-examples">Back</a>
+
+      <h1 class="heading-large">
+        Are you going to beat up your cell mate?
+      </h1>
+
+
+
+      <form class="form" action="Question2" method="post">
+
+        <div class="form-group">
+                <fieldset>
+
+                  <legend class="visually-hidden">Where do you live?</legend>
+
+                  <div class="multiple-choice">
+                    <input id="radio-1" type="radio" name="radio-group1" value="Yes" {{ checked ("radio-group1", "Yes")}}>
+                    <label for="radio-1">Yes</label>
+                  </div>
+                  <div class="multiple-choice">
+                    <input id="radio-2" type="radio" name="radio-group1" value="No"{{ checked ("radio-group1", "No")}}>
+                    <label for="radio-2">No</label>
+                  </div>
+                  <p class="form-block">or</p>
+                  <div class="multiple-choice">
+                    <input id="radio-3" type="radio" name="radio-group1" value="dunt no"{{ checked ("radio-group1", "Dunt no")}}>
+                    <label for="radio-3">Dunt no</label>
+                  </div>
+
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}

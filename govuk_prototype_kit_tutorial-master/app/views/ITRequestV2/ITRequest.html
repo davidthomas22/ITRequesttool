@@ -1,0 +1,76 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <a class="link-back" href="/docs/tutorials-and-examples">Back</a>
+
+      <h1 class="heading-large">
+        I want to:
+      </h1>
+
+
+
+      <form class="form" action="Question2" method="post">
+
+        <div class="form-group">
+                <fieldset>
+
+                  <legend class="visually-hidden">CatList</legend>
+
+                  <div class="multiple-choice">
+                    <input id="QAccount" type="radio" name="QAccount" value="Quantum Account" {{ checked ("QAccount", "Quantum Account")}}>
+                    <label for="QAccount">Make a change to my computer access</label>
+                  </div>
+
+                  <div class="multiple-choice">
+                    <input id="Software" type="radio" name="Software" value="Software"{{ checked ("Software", "Software")}}>
+                    <label for="Software">Change email </label>
+                  </div>
+
+                  <div class="multiple-choice">
+                    <input id="AccountAccess" type="radio" name="AccountAccess" value="Account Access"{{ checked ("AccountAccess", "Account Access")}}>
+                    <label for="AccountAccess">Account Access</label>
+                  </div>
+
+                  <div class="multiple-choice">
+                    <input id="Email" type="radio" name="Email" value="Email"{{ checked ("Email", "Email")}}>
+                    <label for="Email">Email</label>
+                  </div>
+
+                  <div class="multiple-choice">
+                    <input id="Hardware" type="radio" name="Hardware" value="Hardware"{{ checked ("Hardware", "Hardware")}}>
+                    <label for="Hardware">Hardware</label>
+                  </div>
+
+                  <div class="multiple-choice">
+                    <input id="Telephone" type="radio" name="Telephone" value="Telephone"{{ checked ("Telephone", "Telephone")}}>
+                    <label for="Telephone">Telephone</label>
+                  </div>
+
+                  <div class="multiple-choice">
+                    <input id="Misc" type="radio" name="Misc" value="Other"{{ checked ("Misc", "Other")}}>
+                    <label for="Misc">Other</label>
+                  </div>
+
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <input class="button" type="submit" value="Continue">
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
